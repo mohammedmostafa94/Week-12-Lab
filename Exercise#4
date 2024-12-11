@@ -1,0 +1,9 @@
+code#4:
+def find_largest(lst):
+    if len(lst) == 1:
+        return lst[0]
+    largest_of_rest = find_largest(lst[1:])
+    if lst[0] > largest_of_rest:
+        return lst[0]
+    else:
+        return largest_of_rest
